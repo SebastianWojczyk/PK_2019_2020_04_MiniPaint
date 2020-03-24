@@ -21,7 +21,7 @@ namespace _04_MiniPaint
         {
             InitializeComponent();
             openFileDialog.Filter = saveFileDialog.Filter = "Grafika BMP|*.bmp|Grafika PNG|*.png|Grafika JPG|*.jpg";
-            myPen = new Pen(Color.Red, 5);
+            myPen = new Pen(buttonColor.BackColor, (float)numericUpDownWidth.Value);
             myPen.EndCap = myPen.StartCap = System.Drawing.Drawing2D.LineCap.Round;
 
         }
@@ -84,6 +84,20 @@ namespace _04_MiniPaint
         private void pictureBoxMyImage_MouseUp(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void numericUpDownWidth_ValueChanged(object sender, EventArgs e)
+        {
+            myPen.Width = (float)numericUpDownWidth.Value;
+        }
+
+        private void buttonColor_Click(object sender, EventArgs e)
+        {
+            if(colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                buttonColor.BackColor = colorDialog.Color;
+                myPen.Color = colorDialog.Color;
+            }
         }
     }
 }

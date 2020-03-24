@@ -12,12 +12,12 @@ using System.Windows.Forms;
 
 namespace _04_MiniPaint
 {
-    public partial class Form1 : Form
+    public partial class FormMiniPaint : Form
     {
         Graphics graphics;
         Point tempPoint;
         Pen myPen;
-        public Form1()
+        public FormMiniPaint()
         {
             InitializeComponent();
             openFileDialog.Filter = saveFileDialog.Filter = "Grafika BMP|*.bmp|Grafika PNG|*.png|Grafika JPG|*.jpg";

@@ -1,6 +1,6 @@
 ﻿namespace _04_MiniPaint
 {
-    partial class Form1
+    partial class FormMiniPaint
     {
         /// <summary>
         /// Required designer variable.
@@ -268,7 +268,7 @@
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "MiniPaint v0.1";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxMyImage)).EndInit();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
